@@ -1,0 +1,32 @@
+.outline-none {
+    outline: none;
+ }
+ 
+ .border {
+     border: 2px solid #dc3545 !important;
+ }
+ 
+ .shadow {
+     box-shadow: 5px 5px 5px #bababa !important;
+ }
+ 
+ button:hover {
+     transition: 0.5s all ease-in-out;
+     background-color: #f14f5f !important;
+ }
+ 
+ input:focus {
+     border: 2px solid #f14f5f !important;
+ }
+
+ @media (max-width: 365px) {
+    .input-responsive {
+      width: 100% !important;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .btn-responsive {
+      display: block;
+      width: 100%;
+    }
+  }
