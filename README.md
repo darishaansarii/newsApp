@@ -6,9 +6,11 @@ A responsive web application that lets users search for the latest news articles
 > 📂 **GitHub Repo:** [https://github.com/darishaansarii/newsApp](https://github.com/darishaansarii/newsApp)
 
 ### ⚠️ NOTE
+
 This project uses the NewsAPI, which only allows requests from localhost on the free (Developer) plan.
 The API will not work on a live/hosted site (e.g., GitHub Pages) unless you upgrade to a paid plan.
 To test and view the news functionality, please run the project locally on a live server.
+
 ---
 
 ## 🚀 Features
