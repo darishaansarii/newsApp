@@ -3,18 +3,19 @@ let input = document.getElementById("inputBox");
 let showData = document.getElementById("showData");
 
 const searchNews = () => {
-    try{
+  try {
     showData.innerHTML = `<div class="spinner-grow text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>`;
-    
-    let api_url = `https://newsapi.org/v2/everything?q=${input.value}&from=2025-05-16&sortBy=publishedAt&apiKey=${api_key}`;
-    fetch (api_url)
-    .then ((res) => res.json())
-    .then ((data) => {
+
+    let api_url = `https://newsapi.org/v2/top-headlines?q=${input.value}&country=us&apiKey=${api_key}`;
+
+    fetch(api_url)
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data.articles);
 
-        showData.innerHTML="";
+        showData.innerHTML = "";
         data.articles.forEach((e, i) => {
-            showData.innerHTML += `
+          showData.innerHTML += `
             <div class="card d-flex flex-column justify-content-between" style="width: 18rem; height: 100%;">
               <img src="${e.urlToImage}" class="card-img-top" alt="news-img">
               <div class="card-body d-flex flex-column">
@@ -24,11 +25,8 @@ const searchNews = () => {
               </div>
             </div>`;
         });
-        
-    
-    })
-    
-    } catch(err) {
-        console.log(err);
-    }  
+      });
+  } catch (err) {
+    console.log(err);
+  }
 };
