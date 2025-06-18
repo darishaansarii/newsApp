@@ -6,10 +6,7 @@ const searchNews = () => {
     try {
         showData.innerHTML = `<div class="spinner-grow text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>`;
 
-        let proxy = "https://cors-anywhere.herokuapp.com/";
-        let api_url = `${proxy}https://newsapi.org/v2/top-headlines?q=${input.value}&country=us&apiKey=${api_key}`;
-
-        //let api_url = `https://newsapi.org/v2/top-headlines?q=${input.value}&country=us&apiKey=${api_key}`;
+        let api_url = `https://newsapi.org/v2/top-headlines?q=${input.value}&country=us&apiKey=${api_key}`;
 
         fetch(api_url)
             .then((res) => res.json())
